@@ -2,7 +2,8 @@ import React from 'react'
 import { connectViewModel } from 'resolve-redux'
 import { bindActionCreators } from 'redux'
 
-import { Helmet } from 'react-helmet'
+import Header from '../components/Header.js'
+
 import {
   ListGroup,
   ListGroupItem,
@@ -27,12 +28,7 @@ export const Admin = ({
 
   return (
     <div>
-      <Helmet>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/bootstrap.min.css" />
-        <link rel="stylesheet" href="/style.css" />
-        <title>AniQuiz</title>
-      </Helmet>
+      <Header />
 
       <div className="admin-wrapper">
 
