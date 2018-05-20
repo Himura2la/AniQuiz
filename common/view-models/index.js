@@ -1,49 +1,19 @@
+const startGameState = () => ({
+  round: 0,
+  musicPlaying: false,
+  rate: null,
+  answeringTeam: null
+})
+
 export default [
-  {
-    name: 'Todos',
-    projection: {
-      Init: () => ({}),
-      ITEM_CREATED: (state, { payload: { id, text } }) => ({
-        ...state,
-        [id]: {
-          text,
-          checked: false
-        }
-      }),
-      ITEM_TOGGLED: (state, { payload: { id } }) => ({
-        ...state,
-        [id]: {
-          ...state[id],
-          checked: !state[id].checked
-        }
-      }),
-      ITEM_REMOVED: (state, { payload: { id } }) => {
-        const nextState = { ...state }
-        delete nextState[id]
-        return nextState
-      }
-    },
-    serializeState: state => JSON.stringify(state),
-    deserializeState: state => JSON.parse(state)
-  },
   {
     name: 'TimerOST',
     projection: {
-      Init: () => ({
-        round: 1,
-        musicPlaying: false,
-        rate: null,
-        answeringTeam: null
-      }),
-      GAME_RESET: (state) => ({
-        round: 1,
-        musicPlaying: false,
-        rate: null,
-        answeringTeam: null
-      }),
-      MUSIC_STARTED: (state, { payload: { round } }) => ({
+      Init: startGameState,
+      GAME_RESET: startGameState,
+      MUSIC_STARTED: (state) => ({
         ...state,
-        round: round,
+        round: state.round + 1,
         musicPlaying: true,
         rate: 10
       }),

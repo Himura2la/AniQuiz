@@ -1,4 +1,4 @@
-.example-wrapper {
+.admin-wrapper {
   max-width: 580px;
   margin: 0 auto;
   padding-left: 10px;
@@ -9,19 +9,11 @@
   margin-top: 8%;
 }
 
-.example-close-button {
-  cursor: pointer;
-  float: right;
-}
-
-.example-form {
-  margin-top: 7%;
-}
-
 .example-form-control {
   min-width: 83%;
 }
 
-.example-button {
-  float: right;
+.admin-button {
+  margin-left: 5pt;
+  margin-right: 5pt
 }

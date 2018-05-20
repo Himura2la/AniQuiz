@@ -34,7 +34,7 @@ export const Admin = ({
         <title>AniQuiz</title>
       </Helmet>
 
-      <div className="example-wrapper">
+      <div className="admin-wrapper">
 
         <ListGroup className="example-list">
           {Object.keys(state).map(k => (
@@ -44,36 +44,24 @@ export const Admin = ({
           ))}
         </ListGroup>
 
-        <Button
-          className="example-button"
-          bsStyle="success"
+        <Button className="admin-button" bsStyle="danger"
           onClick={() => {newGame(aggregateId)}}
-        >
-          New Game
+        > New Game
         </Button>
 
-        <Button
-          className="example-button"
-          bsStyle="success"
-          onClick={() => {startMusic(aggregateId, {round: 1})}}
-        >
-          Start Music
+        <Button className="admin-button" bsStyle="primary"
+          onClick={() => {startMusic(aggregateId)}}
+        > Start Music
         </Button>
 
-        <Button
-          className="example-button"
-          bsStyle="success"
+        <Button className="admin-button" bsStyle="warning"
           onClick={() => {increaseRate(aggregateId)}}
-        >
-          Increase Rate
+        > Increase Rate
         </Button>
 
-        <Button
-          className="example-button"
-          bsStyle="success"
+        <Button className="admin-button" bsStyle="success"
           onClick={() => {stopMusic(aggregateId, {team: 3})}}
-        >
-          Stop Music
+        > Stop Music
         </Button>
 
       </div>
