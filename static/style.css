@@ -5,6 +5,13 @@
   padding-right: 10px;
 }
 
+.board-wrapper {
+  max-width: 580px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .example-list {
   margin-top: 8%;
 }

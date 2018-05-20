@@ -17,7 +17,8 @@ export default [
         ...state,
         round: state.round + 1,
         musicPlaying: true,
-        rate: GameConfig.initRate
+        rate: GameConfig.initRate,
+        answeringTeam: null
       }),
       RATE_INCREASED: (state) => ({
         ...state,

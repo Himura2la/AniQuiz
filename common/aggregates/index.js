@@ -7,10 +7,9 @@ export default [
       newGame: (state) => ({
         type: 'GAME_RESET'
       }),
-      startMusic: (state) => {
-        //TODO: Start timer and call RATE_INCREASED every GameConfig.rateIncreaseSeconds
-        return { type: 'MUSIC_STARTED' }
-      },
+      startMusic: (state) => ({
+        type: 'MUSIC_STARTED'
+      }),
       increaseRate: (state) => ({
         type: 'RATE_INCREASED'
       }),
