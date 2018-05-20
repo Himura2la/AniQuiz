@@ -1,3 +1,5 @@
+import GameConfig from '../game-config'
+
 export default [
   {
     name: 'TimerOST',
@@ -5,9 +7,10 @@ export default [
       newGame: (state) => ({
         type: 'GAME_RESET'
       }),
-      startMusic: (state) => ({
-        type: 'MUSIC_STARTED'
-      }),
+      startMusic: (state) => {
+        //TODO: Start timer and call RATE_INCREASED every GameConfig.rateIncreaseSeconds
+        return { type: 'MUSIC_STARTED' }
+      },
       increaseRate: (state) => ({
         type: 'RATE_INCREASED'
       }),

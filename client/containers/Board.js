@@ -44,26 +44,6 @@ export const Admin = ({
           ))}
         </ListGroup>
 
-        <Button className="admin-button" bsStyle="danger"
-          onClick={() => {newGame(aggregateId)}}
-        > New Game
-        </Button>
-
-        <Button className="admin-button" bsStyle="primary"
-          onClick={() => {startMusic(aggregateId)}}
-        > Start Music
-        </Button>
-
-        <Button className="admin-button" bsStyle="warning"
-          onClick={() => {increaseRate(aggregateId)}}
-        > Increase Rate
-        </Button>
-
-        <Button className="admin-button" bsStyle="success"
-          onClick={() => {stopMusic(aggregateId, {team: 3})}}
-        > Stop Music
-        </Button>
-
       </div>
     </div>
   )
