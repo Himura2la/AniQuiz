@@ -1,3 +1,5 @@
+import GameConfig from '../game-config'
+
 const startGameState = () => ({
   round: 0,
   musicPlaying: false,
@@ -15,11 +17,11 @@ export default [
         ...state,
         round: state.round + 1,
         musicPlaying: true,
-        rate: 10
+        rate: GameConfig.initRate
       }),
       RATE_INCREASED: (state) => ({
         ...state,
-        rate: state.rate + 10
+        rate: state.rate + GameConfig.rateIncrement
       }),
       TEAM_READY: (state, { payload: { team } }) => ({
         ...state,
