@@ -1,5 +1,3 @@
-import GameConfig from '../game-config'
-
 export default [
   {
     name: 'TimerOST',

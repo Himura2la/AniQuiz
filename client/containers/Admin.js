@@ -50,14 +50,19 @@ export const Admin = ({
         > Start Music
         </Button>
 
-        <Button className="admin-button" bsStyle="warning"
-          onClick={() => {increaseRate(aggregateId)}}
-        > Increase Rate
+        <Button className="admin-button" bsStyle="success"
+          onClick={() => {stopMusic(aggregateId, {team: 1})}}
+        > Team 1
+        </Button>
+
+        <Button className="admin-button" bsStyle="success"
+          onClick={() => {stopMusic(aggregateId, {team: 2})}}
+        > Team 2
         </Button>
 
         <Button className="admin-button" bsStyle="success"
           onClick={() => {stopMusic(aggregateId, {team: 3})}}
-        > Stop Music
+        > Team 3
         </Button>
 
       </div>
