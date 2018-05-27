@@ -21,7 +21,6 @@ export const Admin = ({
   state,
   newGame,
   startMusic,
-  increaseRate,
   stopMusic,
   aggregateId
 }) => {

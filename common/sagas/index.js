@@ -12,10 +12,11 @@ async function mainSagaImpl(executeViewModelQuery, executeCommand) {
 
   let musicPlaying = false
   async function getMusicStatus(){
-    musicPlaying = (await executeViewModelQuery({
+    const state = await executeViewModelQuery({
       aggregateIds: ['root-id'],
       modelName: 'TimerOST'
-    })).musicPlaying
+    })
+    musicPlaying = state.musicStarted != null && state.musicStopped === null
     return musicPlaying
   }
 

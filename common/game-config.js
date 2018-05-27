@@ -1,5 +1,5 @@
 export default {
-  initRate: 10,
-  rateIncrement: 5,
+  initRate: 0,
+  rateIncrement: 1,
   rateIncreaseSeconds: 1
 }

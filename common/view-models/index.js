@@ -2,7 +2,8 @@ import GameConfig from '../game-config'
 
 const startGameState = () => ({
   round: 0,
-  musicPlaying: false,
+  musicStarted: null,
+  musicStopped: null,
   rate: null,
   answeringTeam: null
 })
@@ -16,8 +17,9 @@ export default [
       MUSIC_STARTED: (state) => ({
         ...state,
         round: state.round + 1,
-        musicPlaying: true,
+        musicStarted: new Date(),
         rate: GameConfig.initRate,
+        musicStopped: null,
         answeringTeam: null
       }),
       RATE_INCREASED: (state) => ({
@@ -26,7 +28,7 @@ export default [
       }),
       TEAM_READY: (state, { payload: { team } }) => ({
         ...state,
-        musicPlaying: false,
+        musicStopped: new Date(),
         answeringTeam: team
       })
     },
