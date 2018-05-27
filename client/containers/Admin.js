@@ -40,29 +40,20 @@ export const Admin = ({
         </ListGroup>
 
         <Button className="admin-button" bsStyle="danger"
-          onClick={() => {newGame(aggregateId)}}
+          onClick={() => newGame(aggregateId)}
         > New Game
         </Button>
 
         <Button className="admin-button" bsStyle="primary"
-          onClick={() => {startMusic(aggregateId)}}
+          onClick={() => startMusic(aggregateId)}
         > Start Music
         </Button>
 
-        <Button className="admin-button" bsStyle="success"
-          onClick={() => {stopMusic(aggregateId, {team: 1})}}
-        > Team 1
-        </Button>
-
-        <Button className="admin-button" bsStyle="success"
-          onClick={() => {stopMusic(aggregateId, {team: 2})}}
-        > Team 2
-        </Button>
-
-        <Button className="admin-button" bsStyle="success"
-          onClick={() => {stopMusic(aggregateId, {team: 3})}}
-        > Team 3
-        </Button>
+        {[1, 2, 3].map(i =>
+          <Button className="admin-button" bsStyle="success" key={i}
+            onClick={() => stopMusic(aggregateId, {team: i})}
+          > Team {i}
+          </Button>)}
 
       </div>
     </div>

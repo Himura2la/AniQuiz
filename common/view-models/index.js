@@ -15,11 +15,10 @@ export default [
       Init: startGameState,
       GAME_RESET: startGameState,
       MUSIC_STARTED: (state) => ({
-        ...state,
         round: state.round + 1,
         musicStarted: new Date(),
-        rate: GameConfig.initRate,
         musicStopped: null,
+        rate: GameConfig.initRate,
         answeringTeam: null
       }),
       RATE_INCREASED: (state) => ({
