@@ -1,6 +1,7 @@
 import React from 'react'
 import { connectViewModel } from 'resolve-redux'
 import { bindActionCreators } from 'redux'
+import { diffToSeconds } from '../../common/helpers'
 
 import Header from '../components/Header.js'
 import Timer from '../components/Timer.js'
@@ -14,9 +15,7 @@ function musicTime(state) {
   if (state['musicStopped'] === null)
     return <Timer start={state['musicStarted']} />
   else {
-    var elapsed = Math.round((state['musicStopped'] - state['musicStarted']) / 100)
-    var seconds = (elapsed / 10).toFixed(1)
-    return <span>{seconds}</span>
+    return <span>{diffToSeconds(state['musicStopped'] - state['musicStarted'])}</span>
   }
 }
 

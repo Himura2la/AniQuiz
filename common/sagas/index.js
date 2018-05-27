@@ -1,4 +1,5 @@
 import GameConfig from '../game-config'
+import { diffToSeconds } from '../../common/helpers'
 
 const delay = timeout => new Promise(resolve => setTimeout(resolve, timeout))
 let onMusicTriggered = false;
@@ -11,11 +12,14 @@ async function mainSagaImpl(executeViewModelQuery, executeCommand) {
   })
 
   let musicPlaying = false
+  let musicStarted = null
+  let increasesCount = 0
   async function getMusicStatus(){
     const state = await executeViewModelQuery({
       aggregateIds: ['root-id'],
       modelName: 'TimerOST'
     })
+    musicStarted = state.musicStarted
     musicPlaying = state.musicStarted != null && state.musicStopped === null
     return musicPlaying
   }
@@ -24,19 +28,23 @@ async function mainSagaImpl(executeViewModelQuery, executeCommand) {
     if (onMusicTriggered) {
       getMusicStatus()
       onMusicTriggered = false
+      increasesCount = 0
     }
 
     if (musicPlaying) {
-      await delay(GameConfig.rateIncreaseSeconds * 1000)
-      if (await getMusicStatus()) // May have stopped by this time
+      let elapsedTime = diffToSeconds(new Date() - musicStarted)
+      let lastIncreaseTime = GameConfig.rateIncreaseSeconds * increasesCount
+      if (elapsedTime - lastIncreaseTime >= GameConfig.rateIncreaseSeconds
+          && await getMusicStatus()) {
         await executeCommand({
           aggregateId: 'root-id',
           aggregateName: 'TimerOST',
           type: 'increaseRate'
         })
+        increasesCount++
+      }
     }
-    else
-      await delay(50)   // Standing by...
+    await delay(GameConfig.rateUpdateIntervalMs)
   }
 }
 
