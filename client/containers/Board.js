@@ -9,21 +9,15 @@ import Timer from '../components/Timer.js'
 //import { } from 'react-bootstrap'
 
 const viewModelName = 'TimerOST'
-const aggregateId = 'root-id'  // TODO: Learn how to use it
+const aggregateId = 'root-id'
 
 function musicTime(state) {
-  if (state['musicStopped'] === null)
-    return <Timer start={state['musicStarted']} />
-  else {
-    return <span>{diffToSeconds(state['musicStopped'] - state['musicStarted'])}</span>
-  }
+  return state['musicStopped'] != null ? 
+    <span>{diffToSeconds(state['musicStopped'] - state['musicStarted'])}</span> :
+    <Timer start={state['musicStarted']} />
 }
 
-export const Board = ({
-  state,
-  aggregateId
-}) => {
-
+export const Board = ({ state }) => {
   return (
     <div>
       <Header />

@@ -15,7 +15,7 @@ import {
 } from 'react-bootstrap'
 
 const viewModelName = 'TimerOST'
-const aggregateId = 'root-id'  // TODO: Learn how to use it
+const aggregateId = 'root-id'
 
 export const Admin = ({
   state,
@@ -24,7 +24,6 @@ export const Admin = ({
   stopMusic,
   aggregateId
 }) => {
-
   return (
     <div>
       <Header />
