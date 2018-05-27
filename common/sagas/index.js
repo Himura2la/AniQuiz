@@ -1,5 +1,6 @@
 import GameConfig from '../game-config'
 import { diffToSeconds } from '../../common/helpers'
+import { MQTTClient } from './mqtt'
 
 const delay = timeout => new Promise(resolve => setTimeout(resolve, timeout))
 let onMusicTriggered = false;
@@ -50,8 +51,12 @@ async function mainSagaImpl(executeViewModelQuery, executeCommand) {
 
 function mainSaga({ resolve: { subscribeByEventType, executeViewModelQuery, executeCommand } }) {
   subscribeByEventType(
-    ['MUSIC_STARTED', 'TEAM_READY'],
-    () => { onMusicTriggered = true },
+    ['GAME_RESET', 'MUSIC_STARTED', 'RATE_INCREASED', 'TEAM_READY'],
+    (event) => {
+      onMusicTriggered = event.type === 'MUSIC_STARTED' || event.type === 'TEAM_READY'
+      let msg = event.type === 'TEAM_READY' ? event.type + `(${event.payload.team})` : event.type
+      MQTTClient.publish('TimerOST', msg)
+    },
     { startTime: new Date().getTime() }
   )
 
