@@ -1,0 +1,776 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:ESP8266
+LIBS:controller-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ESP-07v2 U1
+U 1 1 5B0D1D70
+P 4800 2200
+F 0 "U1" H 4800 2100 50  0000 C CNN
+F 1 "ESP-07v2" H 4800 2300 50  0000 C CNN
+F 2 "ESP8266:ESP-07v2" H 4800 2200 50  0001 C CNN
+F 3 "" H 4800 2200 50  0001 C CNN
+	1    4800 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L USB_OTG J?
+U 1 1 5B0D20CF
+P 1500 6500
+F 0 "J?" H 1300 6950 50  0000 L CNN
+F 1 "microUSB" H 1300 6850 50  0000 L CNN
+F 2 "Connectors_USB:USB_Micro-B_Molex_47346-0001" H 1650 6450 50  0001 C CNN
+F 3 "" H 1650 6450 50  0001 C CNN
+	1    1500 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L LM1117-3.3 U?
+U 1 1 5B0D2B7F
+P 2650 6500
+F 0 "U?" H 2500 6625 50  0000 C CNN
+F 1 "LM3940" H 2650 6625 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223-3_TabPin2" H 2650 6500 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product/lm3940imp-3.3-nopb" H 2650 6500 50  0001 C CNN
+	1    2650 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Audio-Jack-3 J?
+U 1 1 5B0E59A9
+P 2800 3000
+F 0 "J?" H 2750 3175 50  0000 C CNN
+F 1 "EXT1" H 2800 2900 50  0000 C CNN
+F 2 "" H 3050 3100 50  0001 C CNN
+F 3 "" H 3050 3100 50  0001 C CNN
+	1    2800 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 5B0E62C7
+P 2100 6700
+F 0 "C?" H 2125 6800 50  0000 L CNN
+F 1 "0.47uF" H 2125 6600 50  0000 L CNN
+F 2 "" H 2138 6550 50  0001 C CNN
+F 3 "" H 2100 6700 50  0001 C CNN
+	1    2100 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C?
+U 1 1 5B0E64AB
+P 3200 6700
+F 0 "C?" H 3225 6800 50  0000 L CNN
+F 1 "33uF" H 3225 6600 50  0000 L CNN
+F 2 "" H 3238 6550 50  0001 C CNN
+F 3 "" H 3200 6700 50  0001 C CNN
+	1    3200 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5B0E74C7
+P 2650 7150
+F 0 "#PWR?" H 2650 6900 50  0001 C CNN
+F 1 "GND" H 2650 7000 50  0000 C CNN
+F 2 "" H 2650 7150 50  0001 C CNN
+F 3 "" H 2650 7150 50  0001 C CNN
+	1    2650 7150
+	1    0    0    -1  
+$EndComp
+Text Label 1900 6300 0    60   ~ 0
+5V
+$Comp
+L +3.3V #PWR?
+U 1 1 5B0E7569
+P 3200 6350
+F 0 "#PWR?" H 3200 6200 50  0001 C CNN
+F 1 "+3.3V" H 3200 6490 50  0000 C CNN
+F 2 "" H 3200 6350 50  0001 C CNN
+F 3 "" H 3200 6350 50  0001 C CNN
+	1    3200 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5B0E79AE
+P 4800 3800
+F 0 "#PWR?" H 4800 3550 50  0001 C CNN
+F 1 "GND" H 4800 3650 50  0000 C CNN
+F 2 "" H 4800 3800 50  0001 C CNN
+F 3 "" H 4800 3800 50  0001 C CNN
+	1    4800 3800
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1800 6500
+NoConn ~ 1800 6600
+NoConn ~ 1800 6700
+NoConn ~ 1400 6900
+$Comp
+L GND #PWR?
+U 1 1 5B0E8A79
+P 6150 1650
+F 0 "#PWR?" H 6150 1400 50  0001 C CNN
+F 1 "GND" H 6150 1500 50  0000 C CNN
+F 2 "" H 6150 1650 50  0001 C CNN
+F 3 "" H 6150 1650 50  0001 C CNN
+	1    6150 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 5B0E8ABF
+P 4800 1100
+F 0 "#PWR?" H 4800 950 50  0001 C CNN
+F 1 "+3.3V" H 4800 1240 50  0000 C CNN
+F 2 "" H 4800 1100 50  0001 C CNN
+F 3 "" H 4800 1100 50  0001 C CNN
+	1    4800 1100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L SW_Push SW?
+U 1 1 5B0E915C
+P 5350 3700
+F 0 "SW?" H 5400 3800 50  0000 L CNN
+F 1 "FLASH" H 5350 3640 50  0000 C CNN
+F 2 "" H 5350 3900 50  0001 C CNN
+F 3 "" H 5350 3900 50  0001 C CNN
+	1    5350 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 5B0E94B1
+P 5100 3100
+F 0 "#PWR?" H 5100 2950 50  0001 C CNN
+F 1 "+3.3V" H 5100 3240 50  0000 C CNN
+F 2 "" H 5100 3100 50  0001 C CNN
+F 3 "" H 5100 3100 50  0001 C CNN
+	1    5100 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5B0E94ED
+P 5450 3250
+F 0 "R?" V 5350 3250 50  0000 C CNN
+F 1 "10k" V 5450 3250 50  0000 C CNN
+F 2 "" V 5380 3250 50  0001 C CNN
+F 3 "" H 5450 3250 50  0001 C CNN
+	1    5450 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5B0E98AE
+P 3450 1450
+F 0 "R?" V 3530 1450 50  0000 C CNN
+F 1 "10k" V 3450 1450 50  0000 C CNN
+F 2 "" V 3380 1450 50  0001 C CNN
+F 3 "" H 3450 1450 50  0001 C CNN
+	1    3450 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 5B0E99C1
+P 3700 1450
+F 0 "R?" V 3780 1450 50  0000 C CNN
+F 1 "10k" V 3700 1450 50  0000 C CNN
+F 2 "" V 3630 1450 50  0001 C CNN
+F 3 "" H 3700 1450 50  0001 C CNN
+	1    3700 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_Push SW?
+U 1 1 5B0E9CFA
+P 2950 1700
+F 0 "SW?" H 3000 1800 50  0000 L CNN
+F 1 "RESET" H 2950 1640 50  0000 C CNN
+F 2 "" H 2950 1900 50  0001 C CNN
+F 3 "" H 2950 1900 50  0001 C CNN
+	1    2950 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5B0E9D82
+P 2600 1850
+F 0 "#PWR?" H 2600 1600 50  0001 C CNN
+F 1 "GND" H 2600 1700 50  0000 C CNN
+F 2 "" H 2600 1850 50  0001 C CNN
+F 3 "" H 2600 1850 50  0001 C CNN
+	1    2600 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST TP?
+U 1 1 5B0E9F2E
+P 3350 2000
+F 0 "TP?" H 3350 2300 50  0000 C BNN
+F 1 "ADC" H 3350 2250 50  0000 C CNN
+F 2 "" H 3350 2000 50  0001 C CNN
+F 3 "" H 3350 2000 50  0001 C CNN
+	1    3350 2000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Audio-Jack-3 J?
+U 1 1 5B0EAB6B
+P 2800 3500
+F 0 "J?" H 2750 3675 50  0000 C CNN
+F 1 "EXT2" H 2800 3400 50  0000 C CNN
+F 2 "" H 3050 3600 50  0001 C CNN
+F 3 "" H 3050 3600 50  0001 C CNN
+	1    2800 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Audio-Jack-3 J?
+U 1 1 5B0EABB9
+P 2800 4000
+F 0 "J?" H 2750 4175 50  0000 C CNN
+F 1 "EXT3" H 2800 3900 50  0000 C CNN
+F 2 "" H 3050 4100 50  0001 C CNN
+F 3 "" H 3050 4100 50  0001 C CNN
+	1    2800 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Audio-Jack-3 J?
+U 1 1 5B0EACA3
+P 2800 4500
+F 0 "J?" H 2750 4675 50  0000 C CNN
+F 1 "EXT4" H 2800 4400 50  0000 C CNN
+F 2 "" H 3050 4600 50  0001 C CNN
+F 3 "" H 3050 4600 50  0001 C CNN
+	1    2800 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5B0EADCD
+P 2350 4950
+F 0 "#PWR?" H 2350 4700 50  0001 C CNN
+F 1 "GND" H 2350 4800 50  0000 C CNN
+F 2 "" H 2350 4950 50  0001 C CNN
+F 3 "" H 2350 4950 50  0001 C CNN
+	1    2350 4950
+	1    0    0    -1  
+$EndComp
+Text Label 3050 2900 0    60   ~ 0
+BTN1
+Text Label 3050 3400 0    60   ~ 0
+BTN2
+Text Label 3050 3900 0    60   ~ 0
+BTN3
+Text Label 3050 4400 0    60   ~ 0
+BTN4
+Entry Wire Line
+	3500 2900 3600 2800
+Entry Wire Line
+	3500 3400 3600 3300
+Entry Wire Line
+	3500 3900 3600 3800
+Entry Wire Line
+	3500 4400 3600 4300
+Entry Wire Line
+	3300 3000 3400 3100
+Entry Wire Line
+	3300 3500 3400 3600
+Entry Wire Line
+	3300 4000 3400 4100
+Entry Wire Line
+	3300 4500 3400 4600
+Text Label 3050 3000 0    60   ~ 0
+XLED1
+Text Label 3050 3500 0    60   ~ 0
+XLED2
+Text Label 3050 4000 0    60   ~ 0
+XLED3
+Text Label 3050 4500 0    60   ~ 0
+XLED4
+Text Label 3650 4800 0    60   ~ 0
+LEDS
+$Comp
+L Conn_01x04_Male J?
+U 1 1 5B0ECA8D
+P 6450 1350
+F 0 "J?" H 6450 1550 50  0000 C CNN
+F 1 "UART" H 6450 1050 50  0000 C CNN
+F 2 "" H 6450 1350 50  0001 C CNN
+F 3 "" H 6450 1350 50  0001 C CNN
+	1    6450 1350
+	-1   0    0    -1  
+$EndComp
+Entry Wire Line
+	3600 2300 3700 2200
+Entry Wire Line
+	3600 2400 3700 2300
+Entry Wire Line
+	3600 2500 3700 2400
+Entry Wire Line
+	3600 2600 3700 2500
+Text Label 3600 3100 0    60   ~ 0
+BUTTONS
+Wire Wire Line
+	3700 2500 3900 2500
+Wire Wire Line
+	3700 2400 3900 2400
+Wire Wire Line
+	3700 2300 3900 2300
+Wire Wire Line
+	3700 2200 3900 2200
+Wire Wire Line
+	4800 1100 4800 1300
+Wire Wire Line
+	5950 2000 5950 1350
+Wire Wire Line
+	5850 1900 5850 1450
+Wire Wire Line
+	6150 1550 6250 1550
+Wire Wire Line
+	6150 1650 6150 1550
+Wire Wire Line
+	5950 1350 6250 1350
+Wire Wire Line
+	5700 2000 5950 2000
+Wire Wire Line
+	5850 1450 6250 1450
+Wire Wire Line
+	5700 1900 5850 1900
+Wire Wire Line
+	3000 4500 3300 4500
+Wire Wire Line
+	3000 4000 3300 4000
+Wire Wire Line
+	3000 3500 3300 3500
+Wire Wire Line
+	3000 3000 3300 3000
+Connection ~ 2350 3600
+Wire Wire Line
+	2600 3600 2350 3600
+Connection ~ 2350 4100
+Wire Wire Line
+	2350 4100 2600 4100
+Connection ~ 2350 4600
+Wire Wire Line
+	2350 4600 2600 4600
+Wire Wire Line
+	2350 3100 2350 4950
+Wire Wire Line
+	2600 3100 2350 3100
+Wire Wire Line
+	3000 4400 3500 4400
+Wire Wire Line
+	3000 3900 3500 3900
+Wire Wire Line
+	3000 3400 3500 3400
+Wire Wire Line
+	3000 2900 3500 2900
+Wire Wire Line
+	2600 1700 2750 1700
+Wire Wire Line
+	2600 1850 2600 1700
+Wire Wire Line
+	3350 2000 3900 2000
+Connection ~ 3450 1700
+Wire Wire Line
+	3450 1900 3900 1900
+Wire Wire Line
+	3450 1600 3450 1900
+Wire Wire Line
+	3150 1700 3450 1700
+Wire Wire Line
+	3700 2100 3900 2100
+Wire Wire Line
+	3700 1600 3700 2100
+Connection ~ 3700 1250
+Wire Wire Line
+	3700 1300 3700 1250
+Connection ~ 4800 1250
+Wire Wire Line
+	3450 1250 3450 1300
+Wire Wire Line
+	3450 1250 6250 1250
+Wire Wire Line
+	4800 3700 5150 3700
+Connection ~ 4800 3700
+Wire Wire Line
+	1500 7050 3200 7050
+Wire Wire Line
+	1500 6900 1500 7050
+Wire Wire Line
+	1800 6300 2100 6300
+Wire Wire Line
+	3200 7050 3200 6850
+Connection ~ 2100 7050
+Wire Wire Line
+	2100 6850 2100 7050
+Wire Wire Line
+	2650 6800 2650 7100
+Connection ~ 2650 7050
+Wire Wire Line
+	4800 3100 4800 3800
+Connection ~ 3200 6500
+Wire Wire Line
+	2950 6500 3200 6500
+Wire Wire Line
+	3200 6350 3200 6550
+Connection ~ 2100 6500
+Wire Wire Line
+	2100 6500 2350 6500
+Wire Wire Line
+	2100 6300 2100 6550
+$Comp
+L LED D?
+U 1 1 5B0EEB3D
+P 9150 1800
+F 0 "D?" H 9150 1900 50  0000 C CNN
+F 1 "LED1" H 9150 1700 50  0000 C CNN
+F 2 "LEDs:LED_0805_HandSoldering" H 9150 1800 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product/to-2013bc-pg" H 9150 1800 50  0001 C CNN
+	1    9150 1800
+	-1   0    0    1   
+$EndComp
+Wire Bus Line
+	3600 2300 3600 4300
+Text Label 3750 2400 0    60   ~ 0
+BTN1
+Text Label 3750 2500 0    60   ~ 0
+BTN2
+Text Label 3750 2300 0    60   ~ 0
+BTN3
+Text Label 3750 2200 0    60   ~ 0
+BTN4
+$Comp
+L R R?
+U 1 1 5B0F0532
+P 8750 1800
+F 0 "R?" V 8830 1800 50  0000 C CNN
+F 1 "180" V 8750 1800 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8680 1800 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product0/9000079468" H 8750 1800 50  0001 C CNN
+	1    8750 1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9000 1800 8900 1800
+Wire Wire Line
+	5700 2100 6600 2100
+Wire Wire Line
+	5700 2200 6600 2200
+Wire Wire Line
+	5700 2400 6600 2400
+Wire Wire Line
+	5700 2500 6600 2500
+Text Notes 6000 2650 0    60   ~ 0
+Imax=12mA
+Text Notes 8750 2400 0    60   ~ 0
+20mA
+Wire Wire Line
+	9300 1800 9500 1800
+$Comp
+L GND #PWR?
+U 1 1 5B0F1216
+P 9500 3000
+F 0 "#PWR?" H 9500 2750 50  0001 C CNN
+F 1 "GND" H 9500 2850 50  0000 C CNN
+F 2 "" H 9500 3000 50  0001 C CNN
+F 3 "" H 9500 3000 50  0001 C CNN
+	1    9500 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D?
+U 1 1 5B0F138D
+P 9150 2150
+F 0 "D?" H 9150 2250 50  0000 C CNN
+F 1 "LED2" H 9150 2050 50  0000 C CNN
+F 2 "LEDs:LED_0805_HandSoldering" H 9150 2150 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product/to-2013bc-pg" H 9150 2150 50  0001 C CNN
+	1    9150 2150
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R?
+U 1 1 5B0F1393
+P 8750 2150
+F 0 "R?" V 8830 2150 50  0000 C CNN
+F 1 "180" V 8750 2150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8680 2150 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product0/9000079468" H 8750 2150 50  0001 C CNN
+	1    8750 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9000 2150 8900 2150
+$Comp
+L LED D?
+U 1 1 5B0F144D
+P 9150 2500
+F 0 "D?" H 9150 2600 50  0000 C CNN
+F 1 "LED3" H 9150 2400 50  0000 C CNN
+F 2 "LEDs:LED_0805_HandSoldering" H 9150 2500 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product/to-2013bc-pg" H 9150 2500 50  0001 C CNN
+	1    9150 2500
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R?
+U 1 1 5B0F1453
+P 8750 2500
+F 0 "R?" V 8830 2500 50  0000 C CNN
+F 1 "180" V 8750 2500 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8680 2500 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product0/9000079468" H 8750 2500 50  0001 C CNN
+	1    8750 2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9000 2500 8900 2500
+$Comp
+L LED D?
+U 1 1 5B0F1531
+P 9150 2850
+F 0 "D?" H 9150 2950 50  0000 C CNN
+F 1 "LED4" H 9150 2750 50  0000 C CNN
+F 2 "LEDs:LED_0805_HandSoldering" H 9150 2850 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product/to-2013bc-pg" H 9150 2850 50  0001 C CNN
+	1    9150 2850
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R?
+U 1 1 5B0F1537
+P 8750 2850
+F 0 "R?" V 8830 2850 50  0000 C CNN
+F 1 "180" V 8750 2850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8680 2850 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product0/9000079468" H 8750 2850 50  0001 C CNN
+	1    8750 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9000 2850 8900 2850
+Wire Wire Line
+	9300 2150 9500 2150
+Connection ~ 9500 2150
+Wire Wire Line
+	9500 2500 9300 2500
+Connection ~ 9500 2500
+Wire Wire Line
+	9500 2850 9300 2850
+Connection ~ 9500 2850
+Wire Wire Line
+	5700 2300 5800 2300
+Wire Wire Line
+	5800 2300 5800 3700
+Wire Wire Line
+	5600 3250 5800 3250
+Connection ~ 5800 3250
+Wire Wire Line
+	5800 3700 5550 3700
+Wire Wire Line
+	5100 3100 5100 3250
+Wire Wire Line
+	5100 3250 5300 3250
+$Comp
+L R R?
+U 1 1 5B0F3790
+P 8750 3350
+F 0 "R?" V 8830 3350 50  0000 C CNN
+F 1 "200" V 8750 3350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8680 3350 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product0/9000079469" H 8750 3350 50  0001 C CNN
+	1    8750 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9500 1800 9500 3000
+$Comp
+L R R?
+U 1 1 5B0F5020
+P 8750 3700
+F 0 "R?" V 8830 3700 50  0000 C CNN
+F 1 "200" V 8750 3700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8680 3700 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product0/9000079469" H 8750 3700 50  0001 C CNN
+	1    8750 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5B0F51BF
+P 8750 4050
+F 0 "R?" V 8830 4050 50  0000 C CNN
+F 1 "200" V 8750 4050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8680 4050 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product0/9000079469" H 8750 4050 50  0001 C CNN
+	1    8750 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5B0F53CB
+P 8750 4400
+F 0 "R?" V 8830 4400 50  0000 C CNN
+F 1 "200" V 8750 4400 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8680 4400 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product0/9000079469" H 8750 4400 50  0001 C CNN
+	1    8750 4400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8900 3350 9250 3350
+Wire Wire Line
+	8900 3700 9250 3700
+Wire Wire Line
+	8900 4050 9250 4050
+Wire Wire Line
+	8900 4400 9250 4400
+Entry Wire Line
+	9250 3350 9350 3450
+Entry Wire Line
+	9250 3700 9350 3800
+Entry Wire Line
+	9250 4050 9350 4150
+Entry Wire Line
+	9250 4400 9350 4500
+Wire Bus Line
+	9350 3450 9350 4800
+Wire Bus Line
+	9350 4800 3400 4800
+Wire Bus Line
+	3400 4800 3400 3100
+Text Label 9000 3350 0    60   ~ 0
+XLED1
+Text Label 9000 3700 0    60   ~ 0
+XLED2
+Text Label 9000 4050 0    60   ~ 0
+XLED3
+Text Label 9000 4400 0    60   ~ 0
+XLED4
+Entry Wire Line
+	6600 2100 6700 2200
+Entry Wire Line
+	6600 2200 6700 2300
+Entry Wire Line
+	6600 2400 6700 2500
+Entry Wire Line
+	6600 2500 6700 2600
+Text Label 6050 2200 0    60   ~ 0
+LED2_CTL
+Text Label 6050 2500 0    60   ~ 0
+LED4_CTL
+Text Label 6050 2400 0    60   ~ 0
+LED1_CTL
+Text Label 6050 2100 0    60   ~ 0
+LED3_CTL
+Wire Wire Line
+	8000 1800 8600 1800
+Wire Wire Line
+	8600 2150 8000 2150
+Wire Wire Line
+	8600 2500 8000 2500
+Wire Wire Line
+	8600 2850 8000 2850
+Wire Wire Line
+	8600 3350 8000 3350
+Wire Wire Line
+	8600 3700 8000 3700
+Wire Wire Line
+	8600 4050 8000 4050
+Wire Wire Line
+	8600 4400 8000 4400
+Entry Wire Line
+	8000 2850 7900 2950
+Entry Wire Line
+	8000 2500 7900 2600
+Entry Wire Line
+	8000 2150 7900 2250
+Entry Wire Line
+	8000 1800 7900 1900
+Entry Wire Line
+	8000 3350 7900 3250
+Entry Wire Line
+	8000 3700 7900 3600
+Entry Wire Line
+	8000 4050 7900 3950
+Entry Wire Line
+	8000 4400 7900 4300
+Text Label 8100 1800 0    60   ~ 0
+LED1_PWR
+Text Label 8100 2150 0    60   ~ 0
+LED2_PWR
+Text Label 8100 2500 0    60   ~ 0
+LED3_PWR
+Text Label 8100 2850 0    60   ~ 0
+LED4_PWR
+Text Label 8100 3350 0    60   ~ 0
+LED1_PWR
+Text Label 8100 3700 0    60   ~ 0
+LED2_PWR
+Text Label 8100 4050 0    60   ~ 0
+LED3_PWR
+Text Label 8100 4400 0    60   ~ 0
+LED4_PWR
+Wire Bus Line
+	7900 1900 7900 4300
+Wire Bus Line
+	6700 2200 6700 2850
+Wire Bus Line
+	6700 2850 6000 2850
+Wire Bus Line
+	6000 2850 6000 4300
+Text Notes 6750 3650 0    60   ~ 0
+Put\nTransistors\nHere
+$EndSCHEMATC

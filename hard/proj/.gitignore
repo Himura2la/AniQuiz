@@ -1,0 +1,6 @@
+# KiCAD Netlist
+*.net
+
+# KiCAD Backup
+*-bak
+*.bak
