@@ -4,3 +4,7 @@
 # KiCAD Backup
 *-bak
 *.bak
+
+# KiCAD Cache
+*-cache.lib
+
