@@ -32,7 +32,6 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:ESP8266
-LIBS:controller-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -257,7 +256,7 @@ U 1 1 5B0E9F2E
 P 3250 2350
 F 0 "TP1" V 3450 2500 50  0000 C BNN
 F 1 "ADC" V 3350 2500 50  0000 C CNN
-F 2 "Connectors:1pin" H 3250 2350 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 3250 2350 50  0001 C CNN
 F 3 "" H 3250 2350 50  0001 C CNN
 	1    3250 2350
 	0    -1   -1   0   
