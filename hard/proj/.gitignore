@@ -8,3 +8,5 @@
 # KiCAD Cache
 *-cache.lib
 
+# Temporary files
+.*

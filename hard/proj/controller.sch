@@ -86,7 +86,7 @@ U 1 1 5B0E59A9
 P 2750 3350
 F 0 "J2" H 2700 3525 50  0000 C CNN
 F 1 "EXT1" H 2750 3250 50  0000 C CNN
-F 2 "" H 3000 3450 50  0001 C CNN
+F 2 "Connectors:Stereo_Jack_3.5mm_Switch_Ledino_KB3SPRS" H 3000 3450 50  0001 C CNN
 F 3 "https://www.chipdip.ru/product/st-214n" H 3000 3450 50  0001 C CNN
 	1    2750 3350
 	1    0    0    -1  
@@ -268,8 +268,8 @@ U 1 1 5B0EAB6B
 P 2750 3850
 F 0 "J3" H 2700 4025 50  0000 C CNN
 F 1 "EXT2" H 2750 3750 50  0000 C CNN
-F 2 "" H 3000 3950 50  0001 C CNN
-F 3 "" H 3000 3950 50  0001 C CNN
+F 2 "Connectors:Stereo_Jack_3.5mm_Switch_Ledino_KB3SPRS" H 3000 3950 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product/st-214n" H 3000 3950 50  0001 C CNN
 	1    2750 3850
 	1    0    0    -1  
 $EndComp
@@ -279,8 +279,8 @@ U 1 1 5B0EABB9
 P 2750 4350
 F 0 "J4" H 2700 4525 50  0000 C CNN
 F 1 "EXT3" H 2750 4250 50  0000 C CNN
-F 2 "" H 3000 4450 50  0001 C CNN
-F 3 "" H 3000 4450 50  0001 C CNN
+F 2 "Connectors:Stereo_Jack_3.5mm_Switch_Ledino_KB3SPRS" H 3000 4450 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product/st-214n" H 3000 4450 50  0001 C CNN
 	1    2750 4350
 	1    0    0    -1  
 $EndComp
@@ -290,8 +290,8 @@ U 1 1 5B0EACA3
 P 2750 4850
 F 0 "J5" H 2700 5025 50  0000 C CNN
 F 1 "EXT4" H 2750 4750 50  0000 C CNN
-F 2 "" H 3000 4950 50  0001 C CNN
-F 3 "" H 3000 4950 50  0001 C CNN
+F 2 "Connectors:Stereo_Jack_3.5mm_Switch_Ledino_KB3SPRS" H 3000 4950 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product/st-214n" H 3000 4950 50  0001 C CNN
 	1    2750 4850
 	1    0    0    -1  
 $EndComp
