@@ -1085,4 +1085,16 @@ Wire Wire Line
 Wire Wire Line
 	6450 4300 6450 4600
 Connection ~ 6450 4600
+Text Label 3050 2050 0    60   ~ 0
+RESET
+Text Label 3350 2350 0    60   ~ 0
+ADC
+Text Label 5800 1850 2    60   ~ 0
+PC_RX
+Text Label 5900 1750 2    60   ~ 0
+PC_TX
+Text Label 5750 3250 2    60   ~ 0
+FLASH
+Text Label 3650 2100 0    60   ~ 0
+CHIP_EN
 $EndSCHEMATC
