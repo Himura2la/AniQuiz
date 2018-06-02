@@ -2,6 +2,7 @@ import GameConfig from '../game-config'
 
 const startGameState = () => ({
   round: 0,
+  hardwareURL: null,
   musicStarted: null,
   musicStopped: null,
   rate: null,
@@ -14,6 +15,10 @@ export default [
     projection: {
       Init: startGameState,
       GAME_RESET: startGameState,
+      HARDWARE_CONNECTED: (state, { payload: { url } }) => ({
+        ...state,
+        hardwareURL: url
+      }),
       MUSIC_STARTED: (state) => ({
         round: state.round + 1,
         musicStarted: new Date(),

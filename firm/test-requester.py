@@ -2,6 +2,7 @@
 
 import json
 import time
+import socket
 from urllib.error import HTTPError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
@@ -32,11 +33,15 @@ def send_command(command_type, payload=None):
 # time.sleep(3)
 # send_command('stopMusic', {'team': 3})
 
+import subprocess
+
+send_command('connectHardware', {'url': f"http://{subprocess.check_output(['hostname', '-I']).decode().split()[0]}:3001/event" })
+
+exit()
 
 def process_event(event):
     print(f'Event "{event}" processed!')
 
-import socket
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.bind(('', 3001))

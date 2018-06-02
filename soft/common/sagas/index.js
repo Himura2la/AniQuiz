@@ -48,16 +48,43 @@ async function mainSagaImpl(executeViewModelQuery, executeCommand) {
   }
 }
 
-function forwardEvent(message) {
-  console.log(message)
+function forwardEvent(event) {
+  let msg
+  switch(event.type) {
+    case 'TEAM_READY':
+      msg = event.type + `(${event.payload === null ? null : event.payload.team})`
+      break
+    case 'HARDWARE_CONNECTED':
+      msg = event.type + `(${event.payload === null ? null : event.payload.url})`
+      break
+    default:
+      msg = event.type
+  }
+  console.log(msg)
+}
+
+async function tryConnectHardware(url, executeCommand){
+  console.log(`HARDWARE_CONNECT_REQUESTED(${url})`)
+
+  //TODO: Check that the URL works
+
+  executeCommand({
+    aggregateId: 'root-id',
+    aggregateName: 'TimerOST',
+    type: 'hardwareConnected',
+    payload: { url }
+  })
 }
 
 function mainSaga({ resolve: { subscribeByEventType, executeViewModelQuery, executeCommand } }) {
   subscribeByEventType(
-    ['GAME_RESET', 'MUSIC_STARTED', 'RATE_INCREASED', 'TEAM_READY'],
+    ['GAME_RESET', 'MUSIC_STARTED', 'RATE_INCREASED', 'TEAM_READY', 'HARDWARE_CONNECT_REQUESTED', 'HARDWARE_CONNECTED'],
     (event) => {
       onMusicTriggered = event.type === 'MUSIC_STARTED' || event.type === 'TEAM_READY'
-      forwardEvent(event.type === 'TEAM_READY' ? event.type + `(${event.payload.team})` : event.type)
+      if (event.type === 'HARDWARE_CONNECT_REQUESTED')
+        tryConnectHardware(event.payload === null ? null : event.payload.url, executeCommand)
+      else
+        forwardEvent(event)
     },
     { startTime: new Date().getTime() }
   )
