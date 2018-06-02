@@ -33,6 +33,9 @@ def send_command(command_type, payload=None):
 # send_command('stopMusic', {'team': 3})
 
 
+def process_event(event):
+    print(f'Event "{event}" processed!')
+
 import socket
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -60,6 +63,9 @@ while True:
         elif req.startswith('POST /event HTTP/1'):
             data = req.rsplit('\n', 1)[1]
             print(f'Event "{data}" received!')
+            if '=' in data:
+                data = data.split('=', 1)[1]
+            process_event(data)
             csock.sendall(f'HTTP/1.1 200 OK\nContent-Type: text/plain\n\n{data} OK'.encode())
         else:
             req = req.split('\n', 1)[0]
