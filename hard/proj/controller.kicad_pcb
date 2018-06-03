@@ -3,7 +3,7 @@
   (general
     (links 83)
     (no_connects 81)
-    (area 46.949999 52.949999 142.050001 131.050001)
+    (area 41.2 52.925 147.800001 131.175)
     (thickness 1.6)
     (drawings 4)
     (tracks 0)
@@ -62,7 +62,7 @@
     (pad_drill 0.6)
     (pad_to_mask_clearance 0)
     (aux_axis_origin 0 0)
-    (visible_elements FFFFF77F)
+    (visible_elements FFFFFF7F)
     (pcbplotparams
       (layerselection 0x00030_80000001)
       (usegerberextensions false)
@@ -1047,7 +1047,7 @@
   )
 
   (module Resistors_SMD:R_0805_HandSoldering (layer F.Cu) (tedit 58E0A804) (tstamp 5B106BEA)
-    (at 83 83)
+    (at 77 83)
     (descr "Resistor SMD 0805, hand soldering")
     (tags "resistor 0805")
     (path /5B0E99C1)
