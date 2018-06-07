@@ -6,9 +6,12 @@ cd lib
 git submodule init
 git submodule update
 
+cd ..
+
 (
 echo ^(fp_lib_table
-echo   ^(lib ^(name ESP8266^)^(type KiCad^)^(uri %cd%\ESP8266.pretty^)^(options ""^)^(descr ""^)^)
+echo   ^(lib ^(name ESP8266^)^(type KiCad^)^(uri %cd%\lib\ESP8266.pretty^)^(options ""^)^(descr ""^)^)
+echo   ^(lib ^(name Project-Lib^)^(type KiCad^)^(uri %cd%\proj-lib.pretty^)^(options ""^)^(descr ""^)^)
 echo ^)
 ) > "%~dp0%fp-lib-table"
 
