@@ -1,38 +1,5 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:switches
-LIBS:relays
-LIBS:motors
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:ESP8266
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -47,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L ESP-07v2 U2
+L ESP8266:ESP-07v2 U2
 U 1 1 5B0D1D70
 P 4750 2550
 F 0 "U2" H 4750 2450 50  0000 C CNN
@@ -58,7 +25,7 @@ F 3 "" H 4750 2550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L USB_OTG J1
+L Connector:USB_B_Micro J1
 U 1 1 5B0D20CF
 P 1500 6500
 F 0 "J1" H 1300 6950 50  0000 L CNN
@@ -69,7 +36,7 @@ F 3 "" H 1650 6450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LM1117-3.3 U1
+L Regulator_Linear:LM1117-3.3 U1
 U 1 1 5B0D2B7F
 P 2650 6500
 F 0 "U1" H 2500 6625 50  0000 C CNN
@@ -80,18 +47,18 @@ F 3 "https://www.chipdip.ru/product/lm3940imp-3.3-nopb" H 2650 6500 50  0001 C C
 	1    0    0    -1  
 $EndComp
 $Comp
-L Audio-Jack-3 J2
+L Connector:AudioJack3_Ground J2
 U 1 1 5B0E59A9
 P 2750 3350
 F 0 "J2" H 2700 3525 50  0000 C CNN
 F 1 "EXT1" H 2750 3250 50  0000 C CNN
-F 2 "Connectors:Stereo_Jack_3.5mm_Switch_Ledino_KB3SPRS" H 3000 3450 50  0001 C CNN
+F 2 "Connector_Audio:StereoJack_3.5mm_Switch_Ledino_KB3SPRS_Horizontal" H 3000 3450 50  0001 C CNN
 F 3 "https://www.chipdip.ru/product/st-214n" H 3000 3450 50  0001 C CNN
 	1    2750 3350
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C1
+L Device:C C1
 U 1 1 5B0E62C7
 P 2100 6700
 F 0 "C1" H 2125 6800 50  0000 L CNN
@@ -102,7 +69,7 @@ F 3 "" H 2100 6700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP C2
+L Device:CP C2
 U 1 1 5B0E64AB
 P 3200 6700
 F 0 "C2" H 3225 6800 50  0000 L CNN
@@ -115,7 +82,7 @@ $EndComp
 Text Label 1900 6300 0    60   ~ 0
 5V
 $Comp
-L GND #PWR03
+L power:GND #PWR03
 U 1 1 5B0E79AE
 P 4750 4750
 F 0 "#PWR03" H 4750 4500 50  0001 C CNN
@@ -130,7 +97,7 @@ NoConn ~ 1800 6600
 NoConn ~ 1800 6700
 NoConn ~ 1400 6900
 $Comp
-L GND #PWR04
+L power:GND #PWR04
 U 1 1 5B0E8A79
 P 6100 2000
 F 0 "#PWR04" H 6100 1750 50  0001 C CNN
@@ -141,7 +108,7 @@ F 3 "" H 6100 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR05
+L power:+3.3V #PWR05
 U 1 1 5B0E8ABF
 P 4750 1450
 F 0 "#PWR05" H 4750 1300 50  0001 C CNN
@@ -152,7 +119,7 @@ F 3 "" H 4750 1450 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L SW_Push SW2
+L Switch:SW_Push SW2
 U 1 1 5B0E915C
 P 5300 4100
 F 0 "SW2" H 5350 4200 50  0000 L CNN
@@ -163,7 +130,7 @@ F 3 "https://www.chipdip.ru/product/tyco-1437566-3-fsmsm" H 5300 4300 50  0001 C
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR06
+L power:+3.3V #PWR06
 U 1 1 5B0E94B1
 P 5050 3450
 F 0 "#PWR06" H 5050 3300 50  0001 C CNN
@@ -174,7 +141,7 @@ F 3 "" H 5050 3450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R7
+L Device:R R7
 U 1 1 5B0E94ED
 P 5400 3600
 F 0 "R7" V 5300 3600 50  0000 C CNN
@@ -185,7 +152,7 @@ F 3 "" H 5400 3600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R1
+L Device:R R1
 U 1 1 5B0E98AE
 P 3400 1800
 F 0 "R1" V 3480 1800 50  0000 C CNN
@@ -196,7 +163,7 @@ F 3 "" H 3400 1800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R2
+L Device:R R2
 U 1 1 5B0E99C1
 P 3650 1800
 F 0 "R2" V 3730 1800 50  0000 C CNN
@@ -207,7 +174,7 @@ F 3 "" H 3650 1800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SW_Push SW1
+L Switch:SW_Push SW1
 U 1 1 5B0E9CFA
 P 2750 2050
 F 0 "SW1" H 2800 2150 50  0000 L CNN
@@ -218,7 +185,7 @@ F 3 "https://www.chipdip.ru/product/tyco-1437566-3-fsmsm" H 2750 2250 50  0001 C
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR07
+L power:GND #PWR07
 U 1 1 5B0E9D82
 P 2400 2200
 F 0 "#PWR07" H 2400 1950 50  0001 C CNN
@@ -229,7 +196,7 @@ F 3 "" H 2400 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L TEST TP1
+L Connector:Test_Point TP1
 U 1 1 5B0E9F2E
 P 3250 2350
 F 0 "TP1" V 3450 2500 50  0000 C BNN
@@ -240,34 +207,34 @@ F 3 "" H 3250 2350 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Audio-Jack-3 J3
+L Connector:AudioJack3_Ground J3
 U 1 1 5B0EAB6B
 P 2750 3850
 F 0 "J3" H 2700 4025 50  0000 C CNN
 F 1 "EXT2" H 2750 3750 50  0000 C CNN
-F 2 "Connectors:Stereo_Jack_3.5mm_Switch_Ledino_KB3SPRS" H 3000 3950 50  0001 C CNN
+F 2 "Connector_Audio:StereoJack_3.5mm_Switch_Ledino_KB3SPRS_Horizontal" H 3000 3950 50  0001 C CNN
 F 3 "https://www.chipdip.ru/product/st-214n" H 3000 3950 50  0001 C CNN
 	1    2750 3850
 	1    0    0    -1  
 $EndComp
 $Comp
-L Audio-Jack-3 J4
+L Connector:AudioJack3_Ground J4
 U 1 1 5B0EABB9
 P 2750 4350
 F 0 "J4" H 2700 4525 50  0000 C CNN
 F 1 "EXT3" H 2750 4250 50  0000 C CNN
-F 2 "Connectors:Stereo_Jack_3.5mm_Switch_Ledino_KB3SPRS" H 3000 4450 50  0001 C CNN
+F 2 "Connector_Audio:StereoJack_3.5mm_Switch_Ledino_KB3SPRS_Horizontal" H 3000 4450 50  0001 C CNN
 F 3 "https://www.chipdip.ru/product/st-214n" H 3000 4450 50  0001 C CNN
 	1    2750 4350
 	1    0    0    -1  
 $EndComp
 $Comp
-L Audio-Jack-3 J5
+L Connector:AudioJack3_Ground J5
 U 1 1 5B0EACA3
 P 2750 4850
 F 0 "J5" H 2700 5025 50  0000 C CNN
 F 1 "EXT4" H 2750 4750 50  0000 C CNN
-F 2 "Connectors:Stereo_Jack_3.5mm_Switch_Ledino_KB3SPRS" H 3000 4950 50  0001 C CNN
+F 2 "Connector_Audio:StereoJack_3.5mm_Switch_Ledino_KB3SPRS_Horizontal" H 3000 4950 50  0001 C CNN
 F 3 "https://www.chipdip.ru/product/st-214n" H 3000 4950 50  0001 C CNN
 	1    2750 4850
 	1    0    0    -1  
@@ -307,7 +274,7 @@ XLED4
 Text Label 3550 5100 0    60   ~ 0
 LEDS
 $Comp
-L Conn_01x04_Male J6
+L Connector:Conn_01x04_Male J6
 U 1 1 5B0ECA8D
 P 6400 1700
 F 0 "J6" H 6400 1900 50  0000 C CNN
@@ -328,7 +295,7 @@ Entry Wire Line
 Text Label 3550 3250 0    60   ~ 0
 BUTTONS
 $Comp
-L LED D2
+L Device:LED D2
 U 1 1 5B0EEB3D
 P 9700 2150
 F 0 "D2" H 9700 2250 50  0000 C CNN
@@ -347,7 +314,7 @@ BTN3
 Text Label 3700 2550 0    60   ~ 0
 BTN4
 $Comp
-L R R14
+L Device:R R14
 U 1 1 5B0F0532
 P 9300 2150
 F 0 "R14" V 9380 2150 50  0000 C CNN
@@ -362,7 +329,7 @@ Imax=12mA
 Text Notes 8750 2350 0    60   ~ 0
 I=20mA
 $Comp
-L LED D3
+L Device:LED D3
 U 1 1 5B0F138D
 P 9700 2500
 F 0 "D3" H 9700 2600 50  0000 C CNN
@@ -373,7 +340,7 @@ F 3 "https://www.chipdip.ru/product/to-2013bc-pg" H 9700 2500 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L R R15
+L Device:R R15
 U 1 1 5B0F1393
 P 9300 2500
 F 0 "R15" V 9380 2500 50  0000 C CNN
@@ -384,7 +351,7 @@ F 3 "https://www.chipdip.ru/product0/9000079468" H 9300 2500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L LED D4
+L Device:LED D4
 U 1 1 5B0F144D
 P 9700 2850
 F 0 "D4" H 9700 2950 50  0000 C CNN
@@ -395,7 +362,7 @@ F 3 "https://www.chipdip.ru/product/to-2013bc-pg" H 9700 2850 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L R R16
+L Device:R R16
 U 1 1 5B0F1453
 P 9300 2850
 F 0 "R16" V 9380 2850 50  0000 C CNN
@@ -406,7 +373,7 @@ F 3 "https://www.chipdip.ru/product0/9000079468" H 9300 2850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L LED D5
+L Device:LED D5
 U 1 1 5B0F1531
 P 9700 3200
 F 0 "D5" H 9700 3300 50  0000 C CNN
@@ -417,7 +384,7 @@ F 3 "https://www.chipdip.ru/product/to-2013bc-pg" H 9700 3200 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L R R17
+L Device:R R17
 U 1 1 5B0F1537
 P 9300 3200
 F 0 "R17" V 9380 3200 50  0000 C CNN
@@ -492,7 +459,7 @@ LED3_PWR
 Text Label 8650 4750 0    60   ~ 0
 LED4_PWR
 $Comp
-L R R10
+L Device:R R10
 U 1 1 5B0F1280
 P 7350 2400
 F 0 "R10" V 7430 2400 50  0000 C CNN
@@ -503,7 +470,7 @@ F 3 "" H 7350 2400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Q_NPN_BEC Q1
+L Device:Q_NPN_BEC Q1
 U 1 1 5B0F1898
 P 7750 2400
 F 0 "Q1" H 7950 2450 50  0000 L CNN
@@ -518,7 +485,7 @@ Entry Wire Line
 Text Label 7850 2150 0    60   ~ 0
 LED1_PWR
 $Comp
-L +3.3V #PWR08
+L power:+3.3V #PWR08
 U 1 1 5B0F424B
 P 10050 1900
 F 0 "#PWR08" H 10050 1750 50  0001 C CNN
@@ -529,7 +496,7 @@ F 3 "" H 10050 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR09
+L power:+3.3V #PWR09
 U 1 1 5B0F48A7
 P 2300 3050
 F 0 "#PWR09" H 2300 2900 50  0001 C CNN
@@ -544,7 +511,7 @@ Entry Wire Line
 Text Label 6800 2400 0    60   ~ 0
 LED1_CTL
 $Comp
-L R R11
+L Device:R R11
 U 1 1 5B0F6EAE
 P 7350 3050
 F 0 "R11" V 7430 3050 50  0000 C CNN
@@ -555,7 +522,7 @@ F 3 "" H 7350 3050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Q_NPN_BEC Q2
+L Device:Q_NPN_BEC Q2
 U 1 1 5B0F6EB4
 P 7750 3050
 F 0 "Q2" H 7950 3100 50  0000 L CNN
@@ -576,7 +543,7 @@ Entry Wire Line
 Text Label 6800 3050 0    60   ~ 0
 LED2_CTL
 $Comp
-L R R12
+L Device:R R12
 U 1 1 5B0F74DF
 P 7350 3700
 F 0 "R12" V 7430 3700 50  0000 C CNN
@@ -587,7 +554,7 @@ F 3 "" H 7350 3700 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Q_NPN_BEC Q3
+L Device:Q_NPN_BEC Q3
 U 1 1 5B0F74E5
 P 7750 3700
 F 0 "Q3" H 7950 3750 50  0000 L CNN
@@ -606,7 +573,7 @@ Entry Wire Line
 Text Label 6800 3700 0    60   ~ 0
 LED3_CTL
 $Comp
-L R R13
+L Device:R R13
 U 1 1 5B0F8A41
 P 7350 4350
 F 0 "R13" V 7430 4350 50  0000 C CNN
@@ -617,7 +584,7 @@ F 3 "" H 7350 4350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Q_NPN_BEC Q4
+L Device:Q_NPN_BEC Q4
 U 1 1 5B0F8A47
 P 7750 4350
 F 0 "Q4" H 7950 4400 50  0000 L CNN
@@ -636,7 +603,7 @@ Entry Wire Line
 Text Label 6800 4350 0    60   ~ 0
 LED4_CTL
 $Comp
-L R R3
+L Device:R R3
 U 1 1 5B0FD9F2
 P 4150 3500
 F 0 "R3" V 4230 3500 50  0000 C CNN
@@ -663,7 +630,7 @@ BTN3
 Text Label 3750 4400 0    60   ~ 0
 BTN4
 $Comp
-L R R4
+L Device:R R4
 U 1 1 5B0FDF49
 P 4150 3800
 F 0 "R4" V 4230 3800 50  0000 C CNN
@@ -674,7 +641,7 @@ F 3 "" H 4150 3800 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R5
+L Device:R R5
 U 1 1 5B0FDFCF
 P 4150 4100
 F 0 "R5" V 4230 4100 50  0000 C CNN
@@ -685,7 +652,7 @@ F 3 "" H 4150 4100 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R6
+L Device:R R6
 U 1 1 5B0FE058
 P 4150 4400
 F 0 "R6" V 4230 4400 50  0000 C CNN
@@ -696,7 +663,7 @@ F 3 "" H 4150 4400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L LED D1
+L Device:LED D1
 U 1 1 5B0FFED7
 P 6050 3600
 F 0 "D1" H 6050 3700 50  0000 C CNN
@@ -715,7 +682,7 @@ Wire Wire Line
 Wire Wire Line
 	3650 2550 3850 2550
 Wire Wire Line
-	4750 1450 4750 1650
+	4750 1450 4750 1600
 Wire Wire Line
 	5900 2350 5900 1700
 Wire Wire Line
@@ -768,7 +735,7 @@ Connection ~ 3400 2050
 Wire Wire Line
 	3400 2250 3850 2250
 Wire Wire Line
-	3400 1950 3400 2250
+	3400 1950 3400 2050
 Wire Wire Line
 	2950 2050 3400 2050
 Wire Wire Line
@@ -782,9 +749,9 @@ Connection ~ 4750 1600
 Wire Wire Line
 	3400 1600 3400 1650
 Wire Wire Line
-	3400 1600 6200 1600
+	3400 1600 3650 1600
 Wire Wire Line
-	1500 7050 3600 7050
+	1500 7050 2100 7050
 Wire Wire Line
 	1500 6900 1500 7050
 Wire Wire Line
@@ -795,22 +762,20 @@ Connection ~ 2100 7050
 Wire Wire Line
 	2100 6850 2100 7050
 Wire Wire Line
-	2650 6800 2650 7150
+	2650 6800 2650 7050
 Connection ~ 2650 7050
 Wire Wire Line
-	4750 3450 4750 4750
+	4750 3450 4750 3500
 Connection ~ 3200 6500
 Wire Wire Line
-	2950 6500 3600 6500
+	2950 6500 3200 6500
 Wire Wire Line
-	3200 6350 3200 6550
+	3200 6350 3200 6500
 Connection ~ 2100 6500
 Wire Wire Line
 	2100 6500 2350 6500
 Wire Wire Line
-	2100 6300 2100 6550
-Wire Bus Line
-	3550 2650 3550 4650
+	2100 6300 2100 6500
 Wire Wire Line
 	9550 2150 9450 2150
 Wire Wire Line
@@ -838,9 +803,9 @@ Wire Wire Line
 Wire Wire Line
 	5650 2650 5750 2650
 Wire Wire Line
-	5750 2650 5750 4100
+	5750 2650 5750 3600
 Wire Wire Line
-	5550 3600 5900 3600
+	5550 3600 5750 3600
 Connection ~ 5750 3600
 Wire Wire Line
 	5750 4100 5500 4100
@@ -872,19 +837,17 @@ Wire Wire Line
 	9150 4400 8550 4400
 Wire Wire Line
 	9150 4750 8550 4750
-Wire Bus Line
-	8450 2250 8450 4650
 Wire Wire Line
 	7200 2400 6750 2400
 Wire Wire Line
 	7850 2150 8350 2150
 Wire Wire Line
-	10050 1900 10050 3200
+	10050 1900 10050 2150
 Connection ~ 10050 2500
 Connection ~ 10050 2850
 Connection ~ 10050 2150
 Wire Wire Line
-	2300 3050 2300 4950
+	2300 3050 2300 3450
 Connection ~ 2300 3450
 Wire Wire Line
 	7850 2650 7850 2600
@@ -925,7 +888,7 @@ Wire Wire Line
 Wire Wire Line
 	7850 2650 7600 2650
 Wire Wire Line
-	4750 4600 7850 4600
+	4750 4600 6450 4600
 Wire Wire Line
 	7850 3950 7600 3950
 Connection ~ 7600 3950
@@ -935,9 +898,7 @@ Connection ~ 7600 3300
 Connection ~ 7600 4600
 Connection ~ 4750 4600
 Wire Wire Line
-	7600 2650 7600 4600
-Wire Bus Line
-	6650 2300 6650 4250
+	7600 2650 7600 3300
 Wire Wire Line
 	3650 4400 4000 4400
 Wire Wire Line
@@ -953,17 +914,15 @@ Wire Wire Line
 	4300 3800 4750 3800
 Connection ~ 4750 3800
 Wire Wire Line
-	4300 4100 5100 4100
+	4300 4100 4750 4100
 Connection ~ 4750 4100
 Wire Wire Line
 	4300 4400 4750 4400
 Connection ~ 4750 4400
-Wire Bus Line
-	3350 3450 3350 5100
 Wire Wire Line
 	6200 3600 6450 3600
 $Comp
-L C C3
+L Device:C C3
 U 1 1 5B1015E7
 P 3600 6700
 F 0 "C3" H 3625 6800 50  0000 L CNN
@@ -979,7 +938,7 @@ Wire Wire Line
 	3600 7050 3600 6850
 Connection ~ 3200 7050
 $Comp
-L R R18
+L Device:R R18
 U 1 1 5B102693
 P 9300 3700
 F 0 "R18" V 9380 3700 50  0000 C CNN
@@ -990,7 +949,7 @@ F 3 "https://www.chipdip.ru/product0/9000079468" H 9300 3700 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R19
+L Device:R R19
 U 1 1 5B102699
 P 9300 4050
 F 0 "R19" V 9380 4050 50  0000 C CNN
@@ -1001,7 +960,7 @@ F 3 "https://www.chipdip.ru/product0/9000079468" H 9300 4050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R20
+L Device:R R20
 U 1 1 5B10269F
 P 9300 4400
 F 0 "R20" V 9380 4400 50  0000 C CNN
@@ -1012,7 +971,7 @@ F 3 "https://www.chipdip.ru/product0/9000079468" H 9300 4400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R21
+L Device:R R21
 U 1 1 5B1026A5
 P 9300 4750
 F 0 "R21" V 9380 4750 50  0000 C CNN
@@ -1024,10 +983,8 @@ F 3 "https://www.chipdip.ru/product0/9000079468" H 9300 4750 50  0001 C CNN
 $EndComp
 Wire Bus Line
 	3350 5100 10050 5100
-Wire Bus Line
-	10050 5100 10050 3800
 $Comp
-L R R8
+L Device:R R8
 U 1 1 5B10343F
 P 6200 3900
 F 0 "R8" V 6280 3900 50  0000 C CNN
@@ -1038,7 +995,7 @@ F 3 "https://www.chipdip.ru/product0/9000079468" H 6200 3900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R9
+L Device:R R9
 U 1 1 5B1034F8
 P 6200 4300
 F 0 "R9" V 6280 4300 50  0000 C CNN
@@ -1076,7 +1033,7 @@ FLASH
 Text Label 3650 2100 0    60   ~ 0
 CHIP_EN
 $Comp
-L GND #PWR?
+L power:GND #PWR?
 U 1 1 5B15B7F1
 P 2650 7150
 F 0 "#PWR?" H 2650 6900 50  0001 C CNN
@@ -1087,7 +1044,7 @@ F 3 "" H 2650 7150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR?
+L power:+3.3V #PWR?
 U 1 1 5B15B994
 P 3200 6350
 F 0 "#PWR?" H 3200 6200 50  0001 C CNN
@@ -1097,4 +1054,72 @@ F 3 "" H 3200 6350 50  0001 C CNN
 	1    3200 6350
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	2300 3950 2300 4450
+Wire Wire Line
+	2300 4450 2300 4950
+Wire Wire Line
+	3400 2050 3400 2250
+Wire Wire Line
+	3650 1600 4750 1600
+Wire Wire Line
+	4750 1600 4750 1650
+Wire Wire Line
+	4750 1600 6200 1600
+Wire Wire Line
+	2100 7050 2650 7050
+Wire Wire Line
+	2650 7050 2650 7150
+Wire Wire Line
+	2650 7050 3200 7050
+Wire Wire Line
+	3200 6500 3600 6500
+Wire Wire Line
+	3200 6500 3200 6550
+Wire Wire Line
+	2100 6500 2100 6550
+Wire Wire Line
+	5750 3600 5750 4100
+Wire Wire Line
+	5750 3600 5900 3600
+Wire Wire Line
+	10050 2500 10050 2850
+Wire Wire Line
+	10050 2850 10050 3200
+Wire Wire Line
+	10050 2150 10050 2500
+Wire Wire Line
+	2300 3450 2300 3950
+Wire Wire Line
+	7600 3950 7600 4600
+Wire Wire Line
+	7600 3300 7600 3950
+Wire Wire Line
+	7600 4600 7850 4600
+Wire Wire Line
+	4750 4600 4750 4750
+Wire Wire Line
+	4750 3500 4750 3800
+Wire Wire Line
+	4750 3800 4750 4100
+Wire Wire Line
+	4750 4100 5100 4100
+Wire Wire Line
+	4750 4100 4750 4400
+Wire Wire Line
+	4750 4400 4750 4600
+Wire Wire Line
+	3200 7050 3600 7050
+Wire Wire Line
+	6450 4600 7600 4600
+Wire Bus Line
+	3350 3450 3350 5100
+Wire Bus Line
+	10050 3800 10050 5100
+Wire Bus Line
+	6650 2300 6650 4250
+Wire Bus Line
+	3550 2650 3550 4650
+Wire Bus Line
+	8450 2250 8450 4650
 $EndSCHEMATC
