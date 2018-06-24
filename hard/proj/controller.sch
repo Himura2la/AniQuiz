@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:controller-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -99,12 +100,12 @@ NoConn ~ 1400 6900
 $Comp
 L power:GND #PWR04
 U 1 1 5B0E8A79
-P 6100 2000
-F 0 "#PWR04" H 6100 1750 50  0001 C CNN
-F 1 "GND" H 6100 1850 50  0000 C CNN
-F 2 "" H 6100 2000 50  0001 C CNN
-F 3 "" H 6100 2000 50  0001 C CNN
-	1    6100 2000
+P 6100 1925
+F 0 "#PWR04" H 6100 1675 50  0001 C CNN
+F 1 "GND" H 6100 1775 50  0000 C CNN
+F 2 "" H 6100 1925 50  0001 C CNN
+F 3 "" H 6100 1925 50  0001 C CNN
+	1    6100 1925
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -132,24 +133,13 @@ $EndComp
 $Comp
 L power:+3.3V #PWR06
 U 1 1 5B0E94B1
-P 5050 3450
-F 0 "#PWR06" H 5050 3300 50  0001 C CNN
-F 1 "+3.3V" H 5050 3590 50  0000 C CNN
-F 2 "" H 5050 3450 50  0001 C CNN
-F 3 "" H 5050 3450 50  0001 C CNN
-	1    5050 3450
+P 6275 3100
+F 0 "#PWR06" H 6275 2950 50  0001 C CNN
+F 1 "+3.3V" H 6275 3240 50  0000 C CNN
+F 2 "" H 6275 3100 50  0001 C CNN
+F 3 "" H 6275 3100 50  0001 C CNN
+	1    6275 3100
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R7
-U 1 1 5B0E94ED
-P 5400 3600
-F 0 "R7" V 5300 3600 50  0000 C CNN
-F 1 "10k" V 5400 3600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 5330 3600 50  0001 C CNN
-F 3 "" H 5400 3600 50  0001 C CNN
-	1    5400 3600
-	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R1
@@ -324,7 +314,7 @@ F 3 "https://www.chipdip.ru/product0/9000079468" H 9300 2150 50  0001 C CNN
 	1    9300 2150
 	0    1    1    0   
 $EndComp
-Text Notes 5950 3000 0    60   ~ 0
+Text Notes 5975 2325 0    60   ~ 0
 Imax=12mA
 Text Notes 8750 2350 0    60   ~ 0
 I=20mA
@@ -411,7 +401,7 @@ XLED3
 Text Label 9600 4750 0    60   ~ 0
 XLED4
 Entry Wire Line
-	6550 2850 6650 2750
+	6550 2650 6650 2550
 Entry Wire Line
 	6550 2750 6650 2650
 Entry Wire Line
@@ -420,9 +410,9 @@ Entry Wire Line
 	6550 2450 6650 2350
 Text Label 6000 2550 0    60   ~ 0
 LED2_CTL
-Text Label 6000 2850 0    60   ~ 0
-LED4_CTL
 Text Label 6000 2750 0    60   ~ 0
+LED4_CTL
+Text Label 6000 2650 0    60   ~ 0
 LED3_CTL
 Text Label 6000 2450 0    60   ~ 0
 LED1_CTL
@@ -662,17 +652,6 @@ F 3 "" H 4150 4400 50  0001 C CNN
 	1    4150 4400
 	0    1    1    0   
 $EndComp
-$Comp
-L Device:LED D1
-U 1 1 5B0FFED7
-P 6050 3600
-F 0 "D1" H 6050 3700 50  0000 C CNN
-F 1 "STATUS" H 6050 3450 50  0000 C CNN
-F 2 "LED_SMD:LED_0805_2012Metric_Pad1.12x1.40mm_HandSolder" H 6050 3600 50  0001 C CNN
-F 3 "https://www.chipdip.ru/product/to-2013bc-pg" H 6050 3600 50  0001 C CNN
-	1    6050 3600
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	3650 2850 3850 2850
 Wire Wire Line
@@ -690,7 +669,7 @@ Wire Wire Line
 Wire Wire Line
 	6100 1900 6200 1900
 Wire Wire Line
-	6100 2000 6100 1900
+	6100 1925 6100 1900
 Wire Wire Line
 	5900 1700 6200 1700
 Wire Wire Line
@@ -783,10 +762,6 @@ Wire Wire Line
 Wire Wire Line
 	5650 2550 6550 2550
 Wire Wire Line
-	5650 2750 6550 2750
-Wire Wire Line
-	5650 2850 6550 2850
-Wire Wire Line
 	9850 2150 10050 2150
 Wire Wire Line
 	9550 2500 9450 2500
@@ -801,18 +776,7 @@ Wire Wire Line
 Wire Wire Line
 	10050 3200 9850 3200
 Wire Wire Line
-	5650 2650 5750 2650
-Wire Wire Line
-	5750 2650 5750 3600
-Wire Wire Line
-	5550 3600 5750 3600
-Connection ~ 5750 3600
-Wire Wire Line
 	5750 4100 5500 4100
-Wire Wire Line
-	5050 3450 5050 3600
-Wire Wire Line
-	5050 3600 5250 3600
 Wire Wire Line
 	9450 3700 9950 3700
 Wire Wire Line
@@ -888,8 +852,6 @@ Wire Wire Line
 Wire Wire Line
 	7850 2650 7600 2650
 Wire Wire Line
-	4750 4600 6450 4600
-Wire Wire Line
 	7850 3950 7600 3950
 Connection ~ 7600 3950
 Wire Wire Line
@@ -919,8 +881,6 @@ Connection ~ 4750 4100
 Wire Wire Line
 	4300 4400 4750 4400
 Connection ~ 4750 4400
-Wire Wire Line
-	6200 3600 6450 3600
 $Comp
 L Device:C C3
 U 1 1 5B1015E7
@@ -983,43 +943,6 @@ F 3 "https://www.chipdip.ru/product0/9000079468" H 9300 4750 50  0001 C CNN
 $EndComp
 Wire Bus Line
 	3350 5100 10050 5100
-$Comp
-L Device:R R8
-U 1 1 5B10343F
-P 6200 3900
-F 0 "R8" V 6280 3900 50  0000 C CNN
-F 1 "180" V 6200 3900 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 6130 3900 50  0001 C CNN
-F 3 "https://www.chipdip.ru/product0/9000079468" H 6200 3900 50  0001 C CNN
-	1    6200 3900
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R9
-U 1 1 5B1034F8
-P 6200 4300
-F 0 "R9" V 6280 4300 50  0000 C CNN
-F 1 "180" V 6200 4300 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 6130 4300 50  0001 C CNN
-F 3 "https://www.chipdip.ru/product0/9000079468" H 6200 4300 50  0001 C CNN
-	1    6200 4300
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6350 4300 6450 4300
-Wire Wire Line
-	5950 4300 6050 4300
-Wire Wire Line
-	5950 3900 5950 4300
-Wire Wire Line
-	5950 3900 6050 3900
-Wire Wire Line
-	6350 3900 6450 3900
-Wire Wire Line
-	6450 3900 6450 3600
-Wire Wire Line
-	6450 4300 6450 4600
-Connection ~ 6450 4600
 Text Label 3050 2050 0    60   ~ 0
 RESET
 Text Label 3350 2350 0    60   ~ 0
@@ -1028,7 +951,7 @@ Text Label 5800 1850 2    60   ~ 0
 PC_RX
 Text Label 5900 1750 2    60   ~ 0
 PC_TX
-Text Label 5750 3250 2    60   ~ 0
+Text Label 5750 3025 2    60   ~ 0
 FLASH
 Text Label 3650 2100 0    60   ~ 0
 CHIP_EN
@@ -1079,10 +1002,6 @@ Wire Wire Line
 Wire Wire Line
 	2100 6500 2100 6550
 Wire Wire Line
-	5750 3600 5750 4100
-Wire Wire Line
-	5750 3600 5900 3600
-Wire Wire Line
 	10050 2500 10050 2850
 Wire Wire Line
 	10050 2850 10050 3200
@@ -1110,8 +1029,6 @@ Wire Wire Line
 	4750 4400 4750 4600
 Wire Wire Line
 	3200 7050 3600 7050
-Wire Wire Line
-	6450 4600 7600 4600
 NoConn ~ 2950 3150
 NoConn ~ 2950 3450
 NoConn ~ 2950 3650
@@ -1120,6 +1037,58 @@ NoConn ~ 2950 4150
 NoConn ~ 2950 4450
 NoConn ~ 2950 4650
 NoConn ~ 2950 4950
+Wire Wire Line
+	6475 2850 6475 3125
+Wire Wire Line
+	5650 2850 6475 2850
+$Comp
+L Device:R R8
+U 1 1 5B32C5CE
+P 6475 3275
+F 0 "R8" V 6375 3275 50  0000 C CNN
+F 1 "10k" V 6475 3275 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 6405 3275 50  0001 C CNN
+F 3 "" H 6475 3275 50  0001 C CNN
+	1    6475 3275
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4750 4600 6475 4600
+Wire Wire Line
+	6475 3425 6475 4600
+Connection ~ 6475 4600
+Wire Wire Line
+	6475 4600 7600 4600
+Wire Wire Line
+	5875 3600 5750 3600
+Wire Wire Line
+	5750 3600 5750 4100
+Wire Wire Line
+	5650 2650 5750 2650
+Wire Wire Line
+	5750 2650 5750 3600
+Connection ~ 5750 3600
+$Comp
+L Device:R R7
+U 1 1 5B0E94ED
+P 6025 3600
+F 0 "R7" V 5925 3600 50  0000 C CNN
+F 1 "10k" V 6025 3600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 5955 3600 50  0001 C CNN
+F 3 "" H 6025 3600 50  0001 C CNN
+	1    6025 3600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6275 3600 6175 3600
+Wire Wire Line
+	6275 3100 6275 3300
+Wire Wire Line
+	5650 2750 5850 2750
+Wire Wire Line
+	5850 2750 5850 3300
+Wire Wire Line
+	5850 3300 6275 3300
 Wire Bus Line
 	3350 3450 3350 5100
 Wire Bus Line
@@ -1130,4 +1099,7 @@ Wire Bus Line
 	3550 2650 3550 4650
 Wire Bus Line
 	8450 2250 8450 4650
+Connection ~ 6275 3300
+Wire Wire Line
+	6275 3300 6275 3600
 $EndSCHEMATC
