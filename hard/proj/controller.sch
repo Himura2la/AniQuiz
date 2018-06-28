@@ -401,7 +401,7 @@ XLED3
 Text Label 9600 4750 0    60   ~ 0
 XLED4
 Entry Wire Line
-	6550 2750 6650 2650
+	6550 2650 6650 2550
 Entry Wire Line
 	6550 2850 6650 2750
 Entry Wire Line
@@ -410,9 +410,9 @@ Entry Wire Line
 	6550 2450 6650 2350
 Text Label 6000 2550 0    60   ~ 0
 LED2_CTL
-Text Label 6000 2850 0    60   ~ 0
+Text Label 5875 2850 0    60   ~ 0
 LED4_CTL
-Text Label 6000 2750 0    60   ~ 0
+Text Label 6000 2650 0    60   ~ 0
 LED3_CTL
 Text Label 6000 2450 0    60   ~ 0
 LED1_CTL
@@ -951,8 +951,6 @@ Text Label 5800 1850 2    60   ~ 0
 UART_TX
 Text Label 5900 1750 2    60   ~ 0
 UART_RX
-Text Label 5700 3600 2    60   ~ 0
-FLASH
 Text Label 3650 2100 0    60   ~ 0
 CHIP_EN
 $Comp
@@ -1106,6 +1104,9 @@ Wire Wire Line
 	5700 2650 5700 4100
 Wire Wire Line
 	5800 2750 5800 3800
+Wire Wire Line
+	5700 2650 6550 2650
+Connection ~ 5700 2650
 Wire Bus Line
 	10050 3800 10050 5100
 Wire Bus Line
@@ -1116,7 +1117,6 @@ Wire Bus Line
 	3550 2650 3550 4650
 Wire Bus Line
 	8450 2250 8450 4650
-Connection ~ 5800 2750
-Wire Wire Line
-	5800 2750 6550 2750
+Text Label 5800 3300 0    60   ~ 0
+GPIO2_HIGH
 $EndSCHEMATC
