@@ -1107,6 +1107,8 @@ Wire Wire Line
 Wire Wire Line
 	5700 2650 6550 2650
 Connection ~ 5700 2650
+Text Label 5800 3300 0    60   ~ 0
+STATUS_LED
 Wire Bus Line
 	10050 3800 10050 5100
 Wire Bus Line
@@ -1117,6 +1119,4 @@ Wire Bus Line
 	3550 2650 3550 4650
 Wire Bus Line
 	8450 2250 8450 4650
-Text Label 5800 3300 0    60   ~ 0
-GPIO2_HIGH
 $EndSCHEMATC
