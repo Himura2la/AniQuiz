@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 20)
+    (drawings 21)
     (tracks 361)
     (zones 0)
     (modules 48)
@@ -2292,6 +2292,9 @@
       (xy -1.523268 1.473782) (xy -1.470506 1.486709) (xy -1.416571 1.489366) (xy -1.363039 1.481755)) (layer B.Cu) (width 0.005))
   )
 
+  (gr_text "REPLACE\nBUTTONS\nTO JUMPERS" (at 77.55 139.3) (layer F.Cu)
+    (effects (font (size 1.5 1.5) (thickness 0.3)))
+  )
   (gr_text tulafest.ru (at 49.25 155.5) (layer B.Cu)
     (effects (font (size 2.5 2.5) (thickness 0.5)) (justify mirror))
   )
