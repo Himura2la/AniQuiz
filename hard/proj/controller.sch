@@ -32,7 +32,7 @@ P 1500 6500
 F 0 "J1" H 1300 6950 50  0000 L CNN
 F 1 "microUSB" H 1300 6850 50  0000 L CNN
 F 2 "Connector_USB:USB_Micro-B_Molex_47346-0001" H 1650 6450 50  0001 C CNN
-F 3 "" H 1650 6450 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product/micro-usb-5s-b" H 1650 6450 50  0001 C CNN
 	1    1500 6500
 	1    0    0    -1  
 $EndComp
@@ -65,7 +65,7 @@ P 2100 6700
 F 0 "C1" H 2125 6800 50  0000 L CNN
 F 1 "0.47uF" H 2125 6600 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.39x1.80mm_HandSolder" H 2138 6550 50  0001 C CNN
-F 3 "" H 2100 6700 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product0/350621974" H 2100 6700 50  0001 C CNN
 	1    2100 6700
 	1    0    0    -1  
 $EndComp
@@ -148,7 +148,7 @@ P 3400 1800
 F 0 "R1" V 3480 1800 50  0000 C CNN
 F 1 "10k" V 3400 1800 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 3330 1800 50  0001 C CNN
-F 3 "" H 3400 1800 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product0/9000079514" H 3400 1800 50  0001 C CNN
 	1    3400 1800
 	1    0    0    -1  
 $EndComp
@@ -159,41 +159,41 @@ P 3650 1800
 F 0 "R2" V 3730 1800 50  0000 C CNN
 F 1 "10k" V 3650 1800 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 3580 1800 50  0001 C CNN
-F 3 "" H 3650 1800 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product0/9000079514" H 3650 1800 50  0001 C CNN
 	1    3650 1800
 	1    0    0    -1  
 $EndComp
 $Comp
 L Switch:SW_Push SW1
 U 1 1 5B0E9CFA
-P 2750 2050
-F 0 "SW1" H 2800 2150 50  0000 L CNN
-F 1 "RESET" H 2750 1990 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_SPST_FSMSM" H 2750 2250 50  0001 C CNN
-F 3 "https://www.chipdip.ru/product/tyco-1437566-3-fsmsm" H 2750 2250 50  0001 C CNN
-	1    2750 2050
+P 2375 2050
+F 0 "SW1" H 2425 2150 50  0000 L CNN
+F 1 "RESET" H 2375 1990 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_FSMSM" H 2375 2250 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product/tyco-1437566-3-fsmsm" H 2375 2250 50  0001 C CNN
+	1    2375 2050
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR07
 U 1 1 5B0E9D82
-P 2400 2200
-F 0 "#PWR07" H 2400 1950 50  0001 C CNN
-F 1 "GND" H 2400 2050 50  0000 C CNN
-F 2 "" H 2400 2200 50  0001 C CNN
-F 3 "" H 2400 2200 50  0001 C CNN
-	1    2400 2200
+P 2025 2200
+F 0 "#PWR07" H 2025 1950 50  0001 C CNN
+F 1 "GND" H 2025 2050 50  0000 C CNN
+F 2 "" H 2025 2200 50  0001 C CNN
+F 3 "" H 2025 2200 50  0001 C CNN
+	1    2025 2200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:Test_Point TP1
 U 1 1 5B0E9F2E
-P 3250 2350
-F 0 "TP1" V 3450 2500 50  0000 C BNN
-F 1 "ADC" V 3350 2500 50  0000 C CNN
-F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 3250 2350 50  0001 C CNN
-F 3 "" H 3250 2350 50  0001 C CNN
-	1    3250 2350
+P 3125 2350
+F 0 "TP1" V 3325 2500 50  0000 C BNN
+F 1 "ADC" V 3225 2500 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 3125 2350 50  0001 C CNN
+F 3 "" H 3125 2350 50  0001 C CNN
+	1    3125 2350
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -455,7 +455,7 @@ P 7350 2400
 F 0 "R10" V 7430 2400 50  0000 C CNN
 F 1 "10k" V 7350 2400 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 7280 2400 50  0001 C CNN
-F 3 "" H 7350 2400 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product0/9000079514" H 7350 2400 50  0001 C CNN
 	1    7350 2400
 	0    1    1    0   
 $EndComp
@@ -507,7 +507,7 @@ P 7350 3050
 F 0 "R11" V 7430 3050 50  0000 C CNN
 F 1 "10k" V 7350 3050 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 7280 3050 50  0001 C CNN
-F 3 "" H 7350 3050 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product0/9000079514" H 7350 3050 50  0001 C CNN
 	1    7350 3050
 	0    1    1    0   
 $EndComp
@@ -539,7 +539,7 @@ P 7350 3700
 F 0 "R12" V 7430 3700 50  0000 C CNN
 F 1 "10k" V 7350 3700 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 7280 3700 50  0001 C CNN
-F 3 "" H 7350 3700 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product0/9000079514" H 7350 3700 50  0001 C CNN
 	1    7350 3700
 	0    1    1    0   
 $EndComp
@@ -569,7 +569,7 @@ P 7350 4350
 F 0 "R13" V 7430 4350 50  0000 C CNN
 F 1 "10k" V 7350 4350 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 7280 4350 50  0001 C CNN
-F 3 "" H 7350 4350 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product0/9000079514" H 7350 4350 50  0001 C CNN
 	1    7350 4350
 	0    1    1    0   
 $EndComp
@@ -599,7 +599,7 @@ P 4150 3500
 F 0 "R3" V 4230 3500 50  0000 C CNN
 F 1 "10k" V 4150 3500 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 4080 3500 50  0001 C CNN
-F 3 "" H 4150 3500 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product0/9000079514" H 4150 3500 50  0001 C CNN
 	1    4150 3500
 	0    1    1    0   
 $EndComp
@@ -626,7 +626,7 @@ P 4150 3800
 F 0 "R4" V 4230 3800 50  0000 C CNN
 F 1 "10k" V 4150 3800 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 4080 3800 50  0001 C CNN
-F 3 "" H 4150 3800 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product0/9000079514" H 4150 3800 50  0001 C CNN
 	1    4150 3800
 	0    1    1    0   
 $EndComp
@@ -637,7 +637,7 @@ P 4150 4100
 F 0 "R5" V 4230 4100 50  0000 C CNN
 F 1 "10k" V 4150 4100 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 4080 4100 50  0001 C CNN
-F 3 "" H 4150 4100 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product0/9000079514" H 4150 4100 50  0001 C CNN
 	1    4150 4100
 	0    1    1    0   
 $EndComp
@@ -648,7 +648,7 @@ P 4150 4400
 F 0 "R6" V 4230 4400 50  0000 C CNN
 F 1 "10k" V 4150 4400 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 4080 4400 50  0001 C CNN
-F 3 "" H 4150 4400 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product0/9000079514" H 4150 4400 50  0001 C CNN
 	1    4150 4400
 	0    1    1    0   
 $EndComp
@@ -705,18 +705,14 @@ Wire Wire Line
 Wire Wire Line
 	2950 3250 3450 3250
 Wire Wire Line
-	2400 2050 2550 2050
+	2025 2050 2175 2050
 Wire Wire Line
-	2400 2200 2400 2050
-Wire Wire Line
-	3250 2350 3850 2350
+	2025 2200 2025 2050
 Connection ~ 3400 2050
 Wire Wire Line
 	3400 2250 3850 2250
 Wire Wire Line
 	3400 1950 3400 2050
-Wire Wire Line
-	2950 2050 3400 2050
 Wire Wire Line
 	3650 2450 3850 2450
 Wire Wire Line
@@ -945,7 +941,7 @@ Wire Bus Line
 	3350 5100 10050 5100
 Text Label 3050 2050 0    60   ~ 0
 RESET
-Text Label 3350 2350 0    60   ~ 0
+Text Label 3150 2350 0    60   ~ 0
 ADC
 Text Label 5800 1850 2    60   ~ 0
 UART_TX
@@ -1044,7 +1040,7 @@ P 6475 3450
 F 0 "R8" V 6375 3450 50  0000 C CNN
 F 1 "10k" V 6475 3450 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 6405 3450 50  0001 C CNN
-F 3 "" H 6475 3450 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product0/9000079514" H 6475 3450 50  0001 C CNN
 	1    6475 3450
 	-1   0    0    1   
 $EndComp
@@ -1067,7 +1063,7 @@ P 6025 4100
 F 0 "R7" V 5925 4100 50  0000 C CNN
 F 1 "10k" V 6025 4100 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 5955 4100 50  0001 C CNN
-F 3 "" H 6025 4100 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product0/9000079514" H 6025 4100 50  0001 C CNN
 	1    6025 4100
 	0    1    1    0   
 $EndComp
@@ -1082,7 +1078,7 @@ P 6025 3800
 F 0 "R9" V 5925 3800 50  0000 C CNN
 F 1 "10k" V 6025 3800 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.29x1.40mm_HandSolder" V 5955 3800 50  0001 C CNN
-F 3 "" H 6025 3800 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product0/9000079514" H 6025 3800 50  0001 C CNN
 	1    6025 3800
 	0    1    1    0   
 $EndComp
@@ -1101,22 +1097,26 @@ Wire Wire Line
 Wire Wire Line
 	5650 2750 5800 2750
 Wire Wire Line
-	5700 2650 5700 4100
-Wire Wire Line
 	5800 2750 5800 3800
 Wire Wire Line
 	5700 2650 6550 2650
 Connection ~ 5700 2650
 Text Label 5800 3300 0    60   ~ 0
 STATUS_LED
-Wire Bus Line
-	10050 3800 10050 5100
+Wire Wire Line
+	3125 2350 3850 2350
+Wire Wire Line
+	2575 2050 3400 2050
 Wire Bus Line
 	3350 3450 3350 5100
+Wire Bus Line
+	10050 3800 10050 5100
 Wire Bus Line
 	6650 2300 6650 4250
 Wire Bus Line
 	3550 2650 3550 4650
 Wire Bus Line
 	8450 2250 8450 4650
+Wire Wire Line
+	5700 2650 5700 4100
 $EndSCHEMATC
