@@ -1,2 +1,6 @@
 
 hard/proj/fp-lib-table
+
+*.bck
+
+*.dcm
