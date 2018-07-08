@@ -37,17 +37,6 @@ F 3 "https://www.chipdip.ru/product/micro-usb-5s-b" H 1650 6450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulator_Linear:LM1117-3.3 U1
-U 1 1 5B0D2B7F
-P 2650 6500
-F 0 "U1" H 2500 6625 50  0000 C CNN
-F 1 "LM3940" H 2650 6625 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 2650 6500 50  0001 C CNN
-F 3 "https://www.chipdip.ru/product/lm3940imp-3.3-nopb" H 2650 6500 50  0001 C CNN
-	1    2650 6500
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:AudioJack3_Ground_Switch J2
 U 1 1 5B0E59A9
 P 2750 3350
@@ -1107,6 +1096,8 @@ Wire Wire Line
 	3125 2350 3850 2350
 Wire Wire Line
 	2575 2050 3400 2050
+Wire Wire Line
+	5700 2650 5700 4100
 Wire Bus Line
 	3350 3450 3350 5100
 Wire Bus Line
@@ -1117,6 +1108,15 @@ Wire Bus Line
 	3550 2650 3550 4650
 Wire Bus Line
 	8450 2250 8450 4650
-Wire Wire Line
-	5700 2650 5700 4100
+$Comp
+L Project-Lib:LM3940 U1
+U 1 1 5B43FD8A
+P 2650 6500
+F 0 "U1" H 2650 6742 50  0000 C CNN
+F 1 "LM3940" H 2650 6651 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 2650 6500 50  0001 C CNN
+F 3 "https://www.chipdip.ru/product/lm3940imp-3.3-nopb" H 2650 6500 50  0001 C CNN
+	1    2650 6500
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
