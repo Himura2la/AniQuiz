@@ -1,7 +1,7 @@
-import wifi
 from network import WLAN, STA_IF
 from machine import Pin
 from time import sleep
+import wifi
 
 print('Connecting...')
 STA = WLAN(STA_IF)
