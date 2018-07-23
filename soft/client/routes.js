@@ -6,10 +6,12 @@ export default [
     path: '/',
     redirectTo: '/a',
     exact: true
-  },{
+  },
+  {
     path: '/a',
-    component: Admin,
-  },{
+    component: Admin
+  },
+  {
     path: '/b',
     component: Board
   }
